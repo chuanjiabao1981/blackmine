@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class Home {
 	
 	private String WECHAT_TOKEN="meiqitong20140108123456";
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET,produces = "text/plain")
 	@ResponseBody
 	public String index(@RequestParam(value="signature") String signature,
 						@RequestParam(value="timestamp") String timestamp,
