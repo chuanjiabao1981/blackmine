@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Home {
 	
-	private String WECHAT_TOKEN="meiqitong20140108123456";
+	private String WECHAT_TOKEN="weixinCourse";
 	@RequestMapping(value = "/", method = RequestMethod.GET,produces="text/html;charset=UTF-8")
 	@ResponseBody
 	public String index(@RequestParam(value="signature") String signature,
+						@RequestParam(value="echostr")   String echostr,
 						@RequestParam(value="timestamp") String timestamp,
-						@RequestParam(value="nonce")	 String nonce,
-						@RequestParam(value="echostr")   String echostr)
+						@RequestParam(value="nonce")	 String nonce
+						)
 	{
 		
 		if (SignUtil.checkSignature(signature, WECHAT_TOKEN, timestamp, nonce)){
