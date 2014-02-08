@@ -4,9 +4,14 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 public class SignUtil {
 	
-	
+	private static final Logger logger 			= LoggerFactory.getLogger(SignUtil.class);
+
 	public static boolean checkSignature(String signature, String token,String timestamp, String nonce) {
 		String[] arr = new String[] { token, timestamp, nonce };
 		// 将token、timestamp、nonce三个参数进行字典序排序
@@ -30,6 +35,9 @@ public class SignUtil {
 		content = null;
 		// 将sha1加密后的字符串可与signature对比，标识该请求来源于微信
 		System.err.println(tmpStr);
+		logger.info("1.+++++++++++++++++++++++:"+signature.toUpperCase());
+		logger.info("2.+++++++++++++++++++++++:"+tmpStr);
+
 		return tmpStr != null ? tmpStr.equals(signature.toUpperCase()) : false;
 	}
 
