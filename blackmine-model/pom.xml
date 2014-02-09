@@ -6,4 +6,59 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>blackmine-model</artifactId>
+    <dependencies>
+	<dependency>
+		<groupId>org.hibernate.javax.persistence</groupId>
+		<artifactId>hibernate-jpa-2.0-api</artifactId>
+		<version>1.0.1.Final</version>
+	</dependency>
+	<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${org.hibernate-validator-version}</version>
+		</dependency>
+	<dependency>
+		<groupId>org.jadira.usertype</groupId>
+		<artifactId>usertype.core</artifactId>
+		<version>${org.jadira.usertype-version}</version>
+	</dependency>
+	<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time-version}</version>
+		</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+	<dependency>
+			<groupId>org.imgscalr</groupId>
+			<artifactId>imgscalr-lib</artifactId>
+			<version>${org.imgscalr-version}</version>
+	</dependency>
+	<dependency> 
+     		<groupId>org.springframework</groupId> 
+     		<artifactId>spring-aspects</artifactId> 
+     		<version>3.2.3.RELEASE</version>
+     </dependency>
+     <dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io-version}</version>
+	</dependency>
+	<!-- beacuse of aspectj compile -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+     
+  </dependencies>
 </project>

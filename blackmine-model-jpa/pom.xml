@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.weiwo</groupId>
+    <artifactId>blackmine</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>blackmine-model-jpa</artifactId>
+    <dependencies>
+	<!-- Spring Orm -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${org.springframework-version}</version>
+	</dependency>
+	<!-- postgresql jdbc -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${org.postgresql.jdbc-version}</version>
+		</dependency>
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+	<!-- spring data jpa -->
+	<dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-jpa</artifactId>
+		<version>${org.springframework.data-version}</version>
+		<!-- 
+			1. spring data 依赖的spring-asm 版本太老了，导致有一些异常抛出
+				java.lang.IncompatibleClassChangeError:  class org.springframework.core.type.classreading.ClassMetadataReadingVisitor has interface org.springframework.asm.ClassVisitor as super class
+			2. 参考http://www.mkyong.com/mongodb/spring-asm-dependency-issue-in-spring-data/
+		 -->
+		<exclusions>
+		   <exclusion>
+		      <groupId>org.springframework</groupId>
+                      <artifactId>spring-asm</artifactId>
+		  </exclusion>
+		</exclusions>
+	</dependency>
+	
+	<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate-version}</version>
+		</dependency>
+
+
+	<dependency>
+		<groupId>com.weiwo</groupId>
+		<artifactId>blackmine-model</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+
+    </dependencies>
+</project>

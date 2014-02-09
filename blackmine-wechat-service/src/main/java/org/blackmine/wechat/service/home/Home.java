@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class Home {
-	
 	private String WECHAT_TOKEN="weixinCourse";
 	@RequestMapping(value = "/", method = RequestMethod.GET,produces="text/html;charset=UTF-8")
 	@ResponseBody

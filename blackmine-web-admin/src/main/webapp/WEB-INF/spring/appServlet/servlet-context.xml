@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		 http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	<aop:aspectj-autoproxy />
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven validator="validator"/>
+	
+	<beans:bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<beans:property name="validationMessageSource" ref="messageSource" />
+	</beans:bean>
+	<!--
+		把如下两个目录下的静态文件映射到uri /resources/下
+		1. / 表示 ${webappRoot}目录,也就是/src/main/webapp
+		2. class:/META-INF/web-resources。这个在为了包含库中的静态文件，例如Spring JavaScript库会吧静态文件放在这个地方
+	 -->
+	<resources location="/, classpath:/META-INF/web-resources/" 	mapping="/resources/**"/>
+	<resources location="/resources/assets/" 	mapping="/assets/**" />    
+	
+	<!-- 这个是为了让 dispatch servlet 处理静态资源-->
+	
+	<default-servlet-handler/>
+	
+	
+	<beans:bean class="org.springframework.web.servlet.view.UrlBasedViewResolver" id="tilesViewResolver">
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
+	</beans:bean>
+	
+	<beans:bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer" id="tilesConfigurer">
+		<beans:property name="definitions"> 
+		    <beans:list>
+				<beans:value>/WEB-INF/layouts/layouts.xml</beans:value> 
+				<!-- Scan views directory for Tiles configurations -->
+				<beans:value>/WEB-INF/views/**/views.xml</beans:value>
+			</beans:list> 
+		</beans:property>
+	</beans:bean>
+
+	
+	<context:component-scan base-package="org.blackmine.web.admin.controller" />
+	
+	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.FixedLocaleResolver">
+		<beans:property name="defaultLocale" value="zh_CN"/>
+	</beans:bean>
+	<beans:bean class="org.springframework.context.support.ReloadableResourceBundleMessageSource" 
+	    		id="messageSource" 
+	    		p:basenames="WEB-INF/i18n/application,WEB-INF/i18n/validation_messages"
+	    		p:fallbackToSystemLocale="false"/>
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+	</beans:bean>
+	
+		
+</beans:beans>

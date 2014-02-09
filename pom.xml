@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.weiwo</groupId>
@@ -7,6 +8,9 @@
   <modules>
   	<module>blackmine-model</module>
   	<module>blackmine-wechat-service</module>
+    <module>blackmine-web-admin</module>
+    <module>blackmine-model-jpa</module>
+    <module>blackmine-security</module>
   </modules>
   <properties>
 		<java-version>1.7</java-version>
@@ -33,7 +37,7 @@
 		<org.apache.tiles-version>3.0.1</org.apache.tiles-version>
 		<ro.isdc.wro4j-version>1.7.0</ro.isdc.wro4j-version>
 		<joda-time-version>2.2</joda-time-version>
-		<org.jadira.usertype-version>3.1.0.CR7</org.jadira.usertype-version><!-- 这个是joda从hibernate中发序列化用到的 -->
+		<org.jadira.usertype-version>3.1.0.CR7</org.jadira.usertype-version><!-- ?????????joda???hibernate???????????????????????? -->
 		<commons-io-version>2.4</commons-io-version>
 		<org.imgscalr-version>4.2</org.imgscalr-version>
 		<!-- aspectj -->
