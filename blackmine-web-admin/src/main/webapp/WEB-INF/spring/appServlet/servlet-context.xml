@@ -26,7 +26,13 @@
 		2. class:/META-INF/web-resources。这个在为了包含库中的静态文件，例如Spring JavaScript库会吧静态文件放在这个地方
 	 -->
 	<resources location="/, classpath:/META-INF/web-resources/" 	mapping="/resources/**"/>
-	<resources location="/resources/assets/" 	mapping="/assets/**" />    
+	<!--resources location="/resources/assets/" 	mapping="/assets/**" /-->    
+	<resources location="/resources/assets/css/" 	mapping="/css/**" />   
+	<resources location="/resources/assets/js/" 	mapping="/js/**" />    
+	<resources location="/resources/assets/img/" 	mapping="/img/**" />    
+	<resources location="/resources/assets/fonts/" 	mapping="/fonts/**" />    
+	
+	
 	
 	<!-- 这个是为了让 dispatch servlet 处理静态资源-->
 	

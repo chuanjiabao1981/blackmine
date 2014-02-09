@@ -4,199 +4,254 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 	  
 <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
-<spring:message code="login_forget_password" 		var="loginForgetPassword"></spring:message>
 
-	  
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-<html>
-		<head>
-			<meta charset="utf-8" />
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    		<meta http-equiv="X-UA-Compatible" content="IE=8" /> 
-			<title><tiles:getAsString name="title"/></title>
+		<title> SmartAdmin </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-			<meta name="description" content="User login page" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Use the correct meta names below for your web application
+			 Ref: http://davidbcalhoun.com/2010/viewport-metatag 
+			 
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-			<!-- basic styles -->
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">	
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
 
-			<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-			<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.css">	
+		
+		<!-- SmartAdmin RTL Support is under construction
+			<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.css"> -->
+		
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/demo.css">
 
-		<!--[if IE 7]>
-		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
-		<![endif]-->
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
 
-		<!-- page specific plugin styles -->
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
-		<!-- fonts -->
-
-		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
-
-		<!-- ace styles -->
-
-		<link rel="stylesheet" href="assets/css/ace.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-
-		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
-		<![endif]-->
-
-		<!-- inline styles related to this page -->
-
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-		<!--[if lt IE 9]>
-		<script src="assets/js/html5shiv.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
 	</head>
-	<body class="login-layout">
-		<div class="main-container">
-			<div class="main-content">
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<div class="login-container">
-							<div class="center">
-								<h1>
-									<i class="icon-leaf green"></i>
-									<span class="red">Check</span>
-									<span class="white">Cloud</span>
-								</h1>
-								<h4 class="blue"> &copy; 维幄通达</h4>
-							</div>
+	<body id="login" class="animated fadeInDown">
+		<!-- possible classes: minified, no-right-panel, fixed-ribbon, fixed-header, fixed-width-->
+		<header id="header">
+			<!--<span id="logo"></span>-->
 
-							<div class="space-6"></div>
+			<div id="logo-group">
+				<span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
 
-							<div class="position-relative">
-								<div id="login-box" class="login-box visible widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header blue lighter bigger">
-												<i class="icon-coffee green"></i>
-												Please Enter Your Information
-											</h4>
-
-											<div class="space-6"></div>
-											
-											<tiles:insertAttribute name="body"/>
-
-
-											<div class="social-or-login center">
-												<span class="bigger-110">Or Login Using</span>
-											</div>
-
-											<div class="social-login center">
-												<a class="btn btn-primary">
-													<i class="icon-facebook"></i>
-												</a>
-
-												<a class="btn btn-info">
-													<i class="icon-twitter"></i>
-												</a>
-
-												<a class="btn btn-danger">
-													<i class="icon-google-plus"></i>
-												</a>
-											</div>
-										</div><!-- /widget-main -->
-
-										<div class="toolbar clearfix">
-											<div>
-												<a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
-													<i class="icon-arrow-left"></i>
-													${loginForgetPassword}
-												</a>
-											</div>
-
-										</div>
-									</div><!-- /widget-body -->
-								</div><!-- /login-box -->
-
-								<div id="forgot-box" class="forgot-box widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header red lighter bigger">
-												<i class="icon-key"></i>
-												Retrieve Password
-											</h4>
-
-											<div class="space-6"></div>
-											<p>
-												Enter your email and to receive instructions
-											</p>
-
-											<form>
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="icon-envelope"></i>
-														</span>
-													</label>
-
-													<div class="clearfix">
-														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
-															<i class="icon-lightbulb"></i>
-															Send Me!
-														</button>
-													</div>
-												</fieldset>
-											</form>
-										</div><!-- /widget-main -->
-
-										<div class="toolbar center">
-											<a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
-												Back to login
-												<i class="icon-arrow-right"></i>
-											</a>
-										</div>
-									</div><!-- /widget-body -->
-								</div><!-- /forgot-box -->
-
-							</div><!-- /position-relative -->
-						</div>
-					</div><!-- /.col -->
-				</div><!-- /.row -->
+				<!-- END AJAX-DROPDOWN -->
 			</div>
-		</div><!-- /.main-container -->
 
-		<!-- basic scripts -->
+			<span id="login-header-space"> <span class="hidden-mobile">Need an account?</span> <a href="register.html" class="btn btn-danger">Creat account</a> </span>
 
-		<!--[if !IE]> -->
+		</header>
+
+		<div id="main" role="main">
+
+			<!-- MAIN CONTENT -->
+			<div id="content" class="container">
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+						<h1 class="txt-color-red login-header-big">SmartAdmin</h1>
+						<div class="hero">
+
+							<div class="pull-left login-desc-box-l">
+								<h4 class="paragraph-header">It's Okay to be Smart. Experience the simplicity of SmartAdmin, everywhere you go!</h4>
+								<div class="login-app-icons">
+									<a href="javascript:void(0);" class="btn btn-danger btn-sm">Frontend Template</a>
+									<a href="javascript:void(0);" class="btn btn-danger btn-sm">Find out more</a>
+								</div>
+							</div>
+							
+							<img src="img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
+
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<h5 class="about-heading">About SmartAdmin - Are you up to date?</h5>
+								<p>
+									Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+								</p>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+								<h5 class="about-heading">Not just your average template!</h5>
+								<p>
+									Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi voluptatem accusantium!
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+						<div class="well no-padding">
+							<form action="index.html" id="login-form" class="smart-form client-form">
+								<header>
+									Sign In
+								</header>
+
+								<fieldset>
+									
+									<section>
+										<label class="label">E-mail</label>
+										<label class="input"> <i class="icon-append fa fa-user"></i>
+											<input type="email" name="email">
+											<b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b></label>
+									</section>
+
+									<section>
+										<label class="label">Password</label>
+										<label class="input"> <i class="icon-append fa fa-lock"></i>
+											<input type="password" name="password">
+											<b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b> </label>
+										<div class="note">
+											<a href="javascript:void(0)">Forgot password?</a>
+										</div>
+									</section>
+
+									<section>
+										<label class="checkbox">
+											<input type="checkbox" name="remember" checked="">
+											<i></i>Stay signed in</label>
+									</section>
+								</fieldset>
+								<footer>
+									<button type="submit" class="btn btn-primary">
+										Sign in
+									</button>
+								</footer>
+							</form>
+
+						</div>
+						
+						<h5 class="text-center"> - Or sign in using -</h5>
+															
+										<ul class="list-inline text-center">
+											<li>
+												<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="btn btn-info btn-circle"><i class="fa fa-twitter"></i></a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>
+											</li>
+										</ul>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--================================================== -->	
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)
+		<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>-->
+
+	    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script> if (!window.jQuery) { document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');} </script>
+
+	    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script> if (!window.jQuery.ui) { document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');} </script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events 		
+		<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+		<!-- BOOTSTRAP JS -->		
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script src="js/notification/SmartNotification.min.js"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+		
+		<!-- EASY PIE CHARTS -->
+		<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		
+		<!-- SPARKLINES -->
+		<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+		
+		<!-- JQUERY VALIDATE -->
+		<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+		
+		<!-- JQUERY MASKED INPUT -->
+		<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+		
+		<!-- JQUERY SELECT2 INPUT -->
+		<script src="js/plugin/select2/select2.min.js"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+		
+		<!-- browser msie issue fix -->
+		<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+		
+		<!-- SmartClick: For mobile devices -->
+		<script src="js/plugin/smartclick/smartclick.js"></script>
+		
+		<!--[if IE 7]>
+			
+			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+			
+		<![endif]-->
+
+		<!-- MAIN APP JS FILE -->
+		<script src="js/app.js"></script>
 
 		<script type="text/javascript">
-			// <![CDATA[
-			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
-			// ]]>
+			runAllForms();
 
+			$(function() {
+				// Validation
+				$("#login-form").validate({
+					// Rules for form validation
+					rules : {
+						email : {
+							required : true,
+							email : true
+						},
+						password : {
+							required : true,
+							minlength : 3,
+							maxlength : 20
+						}
+					},
+
+					// Messages for form validation
+					messages : {
+						email : {
+							required : 'Please enter your email address',
+							email : 'Please enter a VALID email address'
+						},
+						password : {
+							required : 'Please enter your password'
+						}
+					},
+
+					// Do not change code below
+					errorPlacement : function(error, element) {
+						error.insertAfter(element.parent());
+					}
+				});
+			});
 		</script>
 
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
-</script>
-<![endif]-->
-
-		<script type="text/javascript">
-			// <![CDATA[
-			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-			// ]]>
-		</script>
-
-		<!-- inline scripts related to this page -->
-
-		<script type="text/javascript">
-		// <![CDATA[
-
-			function show_box(id) {
-			 jQuery('.widget-box.visible').removeClass('visible');
-			 jQuery('#'+id).addClass('visible');
-			}
-			// ]]>
-		</script>
 	</body>
-	
 </html>

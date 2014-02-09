@@ -42,10 +42,13 @@
     	<property name="filterChainDefinitions">
     	    <!-- authc 是shiro默认支持的filter，其他参见 http://shiro.apache.org/web.html#Web-DefaultFilters -->
         	<value>
-        	    /assets/** =anon
-        	    /login 	= authc
-        	    /logout	= logout
-            	/** = user
+        	    /css/** 	=anon
+        	    /js/**  	=anon
+        	    /img/** 	=anon
+        	    /fonts/** 	=anon
+        	    /login 		= authc
+        	    /logout		= logout
+            	/** 		= user
         	</value>
     	</property>
     </bean>
