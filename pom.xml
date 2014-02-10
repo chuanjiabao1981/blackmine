@@ -11,6 +11,7 @@
     <module>blackmine-web-admin</module>
     <module>blackmine-model-jpa</module>
     <module>blackmine-security</module>
+    <module>blackmine-tools</module>
   </modules>
   <properties>
 		<java-version>1.7</java-version>

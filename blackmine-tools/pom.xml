@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.weiwo</groupId>
+    <artifactId>blackmine</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>blackmine-tools</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.weiwo</groupId>
+  		<artifactId>blackmine-model-jpa</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.weiwo</groupId>
+  		<artifactId>blackmine-security</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<!-- Servlet -->
+  	<!-- 这个是由于依赖shiro要依赖servlet所以要加的(为了解决产生admin密码的问题) -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>${javax.servlet-api-version}</version>
+		<scope>provided</scope>
+	</dependency>
+		
+  	
+  </dependencies>
+</project>

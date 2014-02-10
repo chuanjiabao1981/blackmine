@@ -2,6 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ include file="../views/shared/_message.jsp" %>
+<%@ include file="../views/shared/_label.jsp" %>
+
 	  
 <jsp:directive.page contentType="text/html" pageEncoding="UTF-8" />
 
@@ -99,43 +102,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
 						<div class="well no-padding">
-							<form action="index.html" id="login-form" class="smart-form client-form">
-								<header>
-									Sign In
-								</header>
-
-								<fieldset>
-									
-									<section>
-										<label class="label">E-mail</label>
-										<label class="input"> <i class="icon-append fa fa-user"></i>
-											<input type="email" name="email">
-											<b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b></label>
-									</section>
-
-									<section>
-										<label class="label">Password</label>
-										<label class="input"> <i class="icon-append fa fa-lock"></i>
-											<input type="password" name="password">
-											<b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b> </label>
-										<div class="note">
-											<a href="javascript:void(0)">Forgot password?</a>
-										</div>
-									</section>
-
-									<section>
-										<label class="checkbox">
-											<input type="checkbox" name="remember" checked="">
-											<i></i>Stay signed in</label>
-									</section>
-								</fieldset>
-								<footer>
-									<button type="submit" class="btn btn-primary">
-										Sign in
-									</button>
-								</footer>
-							</form>
-
+							<tiles:insertAttribute name="body"/>
 						</div>
 						
 						<h5 class="text-center"> - Or sign in using -</h5>
@@ -223,9 +190,8 @@
 				$("#login-form").validate({
 					// Rules for form validation
 					rules : {
-						email : {
+						username : {
 							required : true,
-							email : true
 						},
 						password : {
 							required : true,
@@ -237,11 +203,11 @@
 					// Messages for form validation
 					messages : {
 						email : {
-							required : 'Please enter your email address',
-							email : 'Please enter a VALID email address'
+							required : '${messageUserNameNeeded}',
+							email : '${messageValidUserName}'
 						},
 						password : {
-							required : 'Please enter your password'
+							required : '${messagePasswordNeeded}'
 						}
 					},
 

@@ -11,15 +11,12 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.check.v3">
+	<logger name="org.blackmine.web">
 		<level value="info" />
-	</logger>
-	<logger name="com.check.v3.security">
-		<level value="trace" />
 	</logger>
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	
 	<logger name="org.springframework.beans">
