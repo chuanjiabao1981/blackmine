@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class WeiXinController {
 	private static final Logger logger = LoggerFactory.getLogger(WeiXinController.class);
 
-	@RequestMapping(value="/weixin" ,method = RequestMethod.GET)
+	@RequestMapping(value="/weixin" ,method = RequestMethod.POST)
 	public String weiXing(HttpServletRequest httpServletRequest)
 	{
 		logger.info("receive.........");
