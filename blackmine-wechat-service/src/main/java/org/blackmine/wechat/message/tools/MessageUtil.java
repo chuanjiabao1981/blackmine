@@ -30,6 +30,7 @@ import com.thoughtworks.xstream.io.xml.XppDriver;
  */
 public class MessageUtil {
 
+	public static final String MESSAGE_FIELD_MSG_TYPE="MsgType";
 	/**
 	 * 返回消息类型：文本
 	 */
