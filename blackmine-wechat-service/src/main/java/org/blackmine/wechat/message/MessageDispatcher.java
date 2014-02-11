@@ -31,7 +31,7 @@ public class MessageDispatcher {
             
             if (msgType.equalsIgnoreCase(MessageUtil.REQ_MESSAGE_TYPE_TEXT)){
             	for(String key :requestMap.keySet() ){
-            		r = key+":"+requestMap.get(key)+"\n";
+            		r = r + key+":"+requestMap.get(key)+"\n";
             	}
             	 // 回复文本消息  
                 ResTextMessage textMessage = new ResTextMessage();  
