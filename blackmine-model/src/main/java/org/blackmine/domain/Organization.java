@@ -1,7 +1,10 @@
 package org.blackmine.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "organizations")
@@ -12,9 +15,13 @@ public class Organization extends BaseEntity{
 	 */
 	private static final long serialVersionUID = 4075912492260130604L;
 	private String name;
+	@Column(name="description")
+	@NotEmpty
 	private String desc;
 	private float  lat;
 	private float  lng;
+	@Column(name="name",unique=true)
+	@NotEmpty
 	public String getName() {
 		return name;
 	}

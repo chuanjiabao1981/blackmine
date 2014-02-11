@@ -44,7 +44,7 @@
 							<thead>
 								<tr>
 									<th>${labelOrganizationName}</th>
-									<th>${labelOrganizationDes}</th>
+									<th>${labelOrganizationDesc}</th>
 								</tr>
 							</thead>
 							<tbody>

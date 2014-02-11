@@ -13,9 +13,10 @@
    	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven>
-	    <!-- 支持json格式的请求 -->
+	    <!-- 支持json、xml 格式的请求 -->
 	    <message-converters>
 	        <beans:bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+	        <beans:bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
 	    </message-converters>
 	</annotation-driven>
 	

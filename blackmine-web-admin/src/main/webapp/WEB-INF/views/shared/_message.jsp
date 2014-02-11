@@ -5,7 +5,7 @@
 <spring:message code="messageForgetPassword"			var="messageForgetPassword"/>
 <spring:message code="messageStaySignIn"			var="messageStaySignIn"/>
 <spring:message code="messageValidUserName"			var="messageValidUserName"/>
-
+<spring:message code="messageOrganizationInfo"			var="messageOrganizationInfo"/>
 
 
 

@@ -4,6 +4,8 @@
 <spring:message code="labelOrganizationName" 			var="labelOrganizationName"/>
 <spring:message code="labelOrganizationLat" 			var="labelOrganizationLat"/>
 <spring:message code="labelOrganizationLng" 			var="labelOrganizationLng"/>
-<spring:message code="labelOrganizationDes" 			var="labelOrganizationDes"/>
+<spring:message code="labelOrganizationDesc" 			var="labelOrganizationDesc"/>
+<spring:message code="labelButtonSave" 			var="labelButtonSave"/>
+<spring:message code="labelButtonBack" 			var="labelButtonBack"/>
 
 
