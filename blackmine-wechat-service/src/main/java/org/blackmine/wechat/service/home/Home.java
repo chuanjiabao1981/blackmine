@@ -1,6 +1,10 @@
 package org.blackmine.wechat.service.home;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.blackmine.wechat.tools.SignUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,6 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class Home {
+	private static final Logger logger = LoggerFactory.getLogger(Home.class);
+
 	private String WECHAT_TOKEN="weixinCourse";
 	@RequestMapping(value = "/", method = RequestMethod.GET,produces="text/html;charset=UTF-8")
 	@ResponseBody
@@ -24,5 +30,14 @@ public class Home {
 		}
 		return "";
 	}
+	
+	@RequestMapping(value="/" ,method = RequestMethod.POST)
+	@ResponseBody
+	public String message(HttpServletRequest httpServletRequest)
+	{
+		logger.info("receive.........");
+		return "";
+	}
+
 
 }
