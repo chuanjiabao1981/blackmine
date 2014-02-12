@@ -8,7 +8,7 @@
    </div>
    <hr class="simple">
    <div>
-	<img src="http://api.map.baidu.com/staticimage?width=200&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
+	<img src="http://api.map.baidu.com/staticimage?width=240&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
    </div>			
    <hr class="simple">
    <div>
@@ -22,7 +22,7 @@
    </div>
    <hr class="simple">
    <div>
-	<img src="http://api.map.baidu.com/staticimage?width=200&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
+	<img src="http://api.map.baidu.com/staticimage?width=240&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
    </div>			
    <hr class="simple">
    <div>
@@ -36,7 +36,7 @@
    </div>
    <hr class="simple">
    <div>
-	<img src="http://api.map.baidu.com/staticimage?width=200&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
+	<img src="http://api.map.baidu.com/staticimage?width=240&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
    </div>			
    <hr class="simple">
    <div>

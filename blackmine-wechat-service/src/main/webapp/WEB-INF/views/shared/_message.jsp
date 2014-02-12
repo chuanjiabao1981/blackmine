@@ -6,6 +6,7 @@
 <spring:message code="messageStaySignIn"			var="messageStaySignIn"/>
 <spring:message code="messageValidUserName"			var="messageValidUserName"/>
 <spring:message code="messageOrganizationInfo"			var="messageOrganizationInfo"/>
+<spring:message code="messageTitle"			var="messageTitle"/>
 
 
 

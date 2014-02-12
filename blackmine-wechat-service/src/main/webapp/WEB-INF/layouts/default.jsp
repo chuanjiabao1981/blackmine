@@ -1,13 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ include file="../views/shared/_message.jsp" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-		<title> meiqitong </title>
+		<title> ${messageTitle} </title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 
@@ -47,9 +48,12 @@
 
 	</head>
 	<body>
+	    <%@include file="_body_header.jsp" %>
+	
+		 <%@include file="_body_left_panel.jsp" %>
 
 		<!-- MAIN PANEL -->
-		<div>
+		<div id="main" role="main">
 
 			<!-- RIBBON -->
 			<div id="ribbon">
