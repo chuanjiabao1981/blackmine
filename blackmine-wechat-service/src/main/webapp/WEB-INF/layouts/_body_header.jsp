@@ -3,12 +3,8 @@
 			<div id="logo-group">
 
 				<!-- PLACE YOUR LOGO HERE -->
-				<span id="logo"> <img src="${pageContext.request.contextPath}/img/logo.png" alt="SmartAdmin"> </span>
+				<span id="logo"> <img src="${pageContext.request.contextPath}/img/logo-c.png" alt="CoalEnterpise"> </span>
 				<!-- END LOGO PLACEHOLDER -->
-
-				<!-- Note: The activity badge color changes when clicked and resets the number to 0
-				Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
-				<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
 
 				<!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
 
@@ -27,11 +23,6 @@
 				</div>
 				<!-- end collapse menu -->
 
-				<!-- logout button -->
-				<div id="logout" class="btn-header transparent pull-right">
-					<span> <a href="login.html" title="Sign Out"><i class="fa fa-sign-out"></i></a> </span>
-				</div>
-				<!-- end logout button -->
 
 				<!-- search mobile button (this is hidden till mobile view port) -->
 				<!-- div id="search-mobile" class="btn-header transparent pull-right">
