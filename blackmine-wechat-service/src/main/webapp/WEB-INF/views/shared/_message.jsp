@@ -7,6 +7,7 @@
 <spring:message code="messageValidUserName"			var="messageValidUserName"/>
 <spring:message code="messageOrganizationInfo"			var="messageOrganizationInfo"/>
 <spring:message code="messageTitle"			var="messageTitle"/>
+<spring:message code="messageTestBanner"			var="messageTestBanner"/>
 
 
 

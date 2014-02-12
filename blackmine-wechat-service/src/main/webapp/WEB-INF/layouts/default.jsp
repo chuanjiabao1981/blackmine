@@ -87,7 +87,13 @@
 
 			<!-- MAIN CONTENT -->
 			<div id="content">
-
+				<div class="alert alert-success fade in">
+						<button class="close" data-dismiss="alert">
+									×
+						</button>
+						<i class="fa-fw fa fa-bullhorn"></i>
+								<strong>${messageTestBanner}</strong> 
+				</div>				
 				<%@include file="_body_breadcrumbs.jsp" %>
 				
 				<tiles:insertAttribute name="body"/>
