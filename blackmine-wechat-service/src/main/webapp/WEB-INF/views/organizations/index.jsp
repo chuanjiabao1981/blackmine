@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
    </div>
    <hr class="simple">
    <div>
-	<img src="http://api.map.baidu.com/staticimage?copyright=1&width=280&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
+	<img src="http://api.map.baidu.com/staticimage?copyright=1&width=260&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
    </div>			
    <hr class="simple">
    <div>
@@ -26,7 +26,7 @@ pageEncoding="UTF-8"%>
    </div>
    <hr class="simple">
    <div>
-	<img src="http://api.map.baidu.com/staticimage?copyright=1&width=280&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
+	<img src="http://api.map.baidu.com/staticimage?copyright=1&width=260&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
    </div>			
    <hr class="simple">
    <div>
@@ -40,7 +40,7 @@ pageEncoding="UTF-8"%>
    </div>
    <hr class="simple">
    <div>
-	<img src="http://api.map.baidu.com/staticimage?copyright=1&width=280&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
+	<img src="http://api.map.baidu.com/staticimage?copyright=1&width=260&height=100&center=116.265777,39.981141&zoom=11&markers=116.266038,39.9811&markerStyles=s,"/>
    </div>			
    <hr class="simple">
    <div>
