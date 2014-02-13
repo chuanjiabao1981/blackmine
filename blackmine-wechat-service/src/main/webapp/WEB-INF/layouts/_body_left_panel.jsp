@@ -1,5 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <%@ include file="../views/shared/_message.jsp" %>
 <%@ include file="../views/shared/_label.jsp" %>
+
 
 		<!-- Left panel : Navigation area -->
 		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
@@ -7,7 +10,7 @@
 
 			<!-- User info -->
 			<div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> <img src="${pageContext.request.contextPath}/img/avatars/sunny.png" alt="me" class="online" /> <a href="javascript:void(0);" id="show-shortcut">john.doe <i class="fa fa-angle-down"></i></a> </span>
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> <img src="${pageContext.request.contextPath}/img/avatars/sunny.png" alt="me" class="online" /> <a href="javascript:void(0);" id="show-shortcut">欢迎您</a> </span>
 			</div>
 			<!-- end user info -->
 
@@ -28,18 +31,13 @@
 						<a href="index.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">${labelMain}</span></a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-group"></i> <span class="menu-item-parent">${labelMember}</span></a>
-						<ul>
-							<li>
-								<a href="flot.html">${labelBeMember}</a>
-							</li>
-							<li>
-								<a href="morris.html">${labelMemberPriority}</a>
-							</li>
-							<li>
-								<a href="inline-charts.html">${labelSearch}</a>
-							</li>
-						</ul>
+						<a href="inbox.html"><i class="fa fa-lg fa-fw fa-group"></i> <span class="menu-item-parent">${labelBeMember}</span></a>
+					</li>
+					<li>
+						<a href="inbox.html"><i class="fa fa-lg fa-fw fa-shield"></i> <span class="menu-item-parent">${labelMemberPriority}</span></a>
+					</li>
+					<li>
+						<a href="inbox.html"><i class="fa fa-lg fa-fw fa-search"></i> <span class="menu-item-parent">${labelSearch}</span></a>
 					</li>
 					
 					<li>
