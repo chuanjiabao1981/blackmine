@@ -113,13 +113,13 @@
 		<script src="${pageContext.request.contextPath}/js/bootstrap/bootstrap.min.js"></script>
 
 		<!-- CUSTOM NOTIFICATION -->
-		<script src="${pageContext.request.contextPath}/js/notification/SmartNotification.min.js"></script>
+		<!--script src="${pageContext.request.contextPath}/js/notification/SmartNotification.min.js"></script-->
 
 		<!-- JARVIS WIDGETS -->
 		<!-- script src="${pageContext.request.contextPath}/js/smartwidgets/jarvis.widget.min.js"></script-->
 
 		<!-- EASY PIE CHARTS -->
-		<script src="${pageContext.request.contextPath}/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		<!-- script src="${pageContext.request.contextPath}/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script-->
 
 		<!-- SPARKLINES -->
 		<script src="${pageContext.request.contextPath}/js/plugin/sparkline/jquery.sparkline.min.js"></script>
@@ -128,13 +128,13 @@
 		<script src="${pageContext.request.contextPath}/js/plugin/jquery-validate/jquery.validate.min.js"></script>
 
 		<!-- JQUERY MASKED INPUT -->
-		<script src="${pageContext.request.contextPath}/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+		<!-- script src="${pageContext.request.contextPath}/js/plugin/masked-input/jquery.maskedinput.min.js"></script-->
 
 		<!-- JQUERY SELECT2 INPUT -->
 		<script src="${pageContext.request.contextPath}/js/plugin/select2/select2.min.js"></script>
 
 		<!-- JQUERY UI + Bootstrap Slider -->
-		<script src="${pageContext.request.contextPath}/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+		<!-- script src="${pageContext.request.contextPath}/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script-->
 
 		<!-- browser msie issue fix -->
 		<script src="${pageContext.request.contextPath}/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
@@ -155,13 +155,13 @@
 		<script src="${pageContext.request.contextPath}/js/app.js"></script>
 
 		<!-- PAGE RELATED PLUGIN(S) -->
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/jquery.dataTables-cust.min.js"></script>
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/ColReorder.min.js"></script>
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/FixedColumns.min.js"></script>
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/ColVis.min.js"></script>
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/ZeroClipboard.js"></script>
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/media/js/TableTools.min.js"></script>
-		<script src="${pageContext.request.contextPath}/js/plugin/datatables/DT_bootstrap.js"></script>
+		<!-->script src="${pageContext.request.contextPath}/js/plugin/datatables/jquery.dataTables-cust.min.js"></script-->
+		<!--script src="${pageContext.request.contextPath}/js/plugin/datatables/ColReorder.min.js"></script-->
+		<!--script src="${pageContext.request.contextPath}/js/plugin/datatables/FixedColumns.min.js"></script-->
+		<!--script src="${pageContext.request.contextPath}/js/plugin/datatables/ColVis.min.js"></script-->
+		<!--script src="${pageContext.request.contextPath}/js/plugin/datatables/ZeroClipboard.js"></script-->
+		<!--script src="${pageContext.request.contextPath}/js/plugin/datatables/media/js/TableTools.min.js"></script-->
+		<!--script src="${pageContext.request.contextPath}/js/plugin/datatables/DT_bootstrap.js"></script-->
 		
 
 		<script type="text/javascript">
