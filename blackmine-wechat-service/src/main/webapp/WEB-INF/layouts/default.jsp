@@ -2,10 +2,14 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ include file="../views/shared/_message.jsp" %>
+<%@ page contentType="text/html; charset=utf-8"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
 		<title> ${messageTitle} </title>
@@ -47,7 +51,7 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
 	</head>
-	<body>
+	<body class="fixed-header">
 	    <%@include file="_body_header.jsp" %>
 	
 		 <%@include file="_body_left_panel.jsp" %>
@@ -63,7 +67,7 @@
 			<div id="content">
 				<div class="alert alert-success fade in">
 						<button class="close" data-dismiss="alert">
-						×
+						Ã—
 						</button>
 						<i class="fa-fw fa fa-bullhorn"></i>
 						<strong>${messageTestBanner}</strong> 

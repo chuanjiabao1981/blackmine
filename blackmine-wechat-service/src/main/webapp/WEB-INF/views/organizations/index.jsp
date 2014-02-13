@@ -1,6 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../shared/_message.jsp" %>
 <%@ include file="../shared/_label.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+
+<div class="well">
+	你好	
+</div>
 
 <div class="well">
    <div class="">

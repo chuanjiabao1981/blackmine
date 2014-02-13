@@ -8,4 +8,13 @@
 <spring:message code="labelButtonSave" 			var="labelButtonSave"/>
 <spring:message code="labelButtonBack" 			var="labelButtonBack"/>
 
+<spring:message code="labelMain" 			var="labelMain"/>
+<spring:message code="labelMember" 			var="labelMember"/>
+<spring:message code="labelMemberPriority"  var="labelMemberPriority"/>
+<spring:message code="labelBeMember" 			var="labelBeMember"/>
+<spring:message code="labelSearch" 			var="labelSearch"/>
+<spring:message code="labelContact" 			var="labelContact"/>
+<spring:message code="labelFaq" 			var="labelFaq"/>
+
+
 
