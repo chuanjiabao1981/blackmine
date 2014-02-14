@@ -5,22 +5,28 @@
 
 <%@include file="../shared/_message.jsp" %>
 <%@include file="../shared/_label.jsp" %>
-<section id="widget-grid">
+
+<section id="widget-grid" class="">
 	<div class="row">
-		<article class="col-sm-12 col-md-12 col-lg-12">
-			<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-0">
 				<header>
-					<span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-					<h2>Form Grid </h2>
+					<h2><strong>Default</strong> <i>Widget</i></h2>				
 				</header>
+				<!-- widget div-->
 				<div>
 					<!-- widget edit box -->
 					<div class="jarviswidget-editbox">
 						<!-- This area used as dropdown edit box -->
-				
+						<input class="form-control" type="text">
+						<span class="note"><i class="fa fa-check text-success"></i> Change title to update and save instantly!</span>
 					</div>
 					<!-- end widget edit box -->
-					<div class="widget-body no-padding">
+									
+					<!-- widget content -->
+					<div class="widget-body">
 						<form:form modelAttribute="organization"  
  		  			   			   id="organization" 
  		  			   			   name="organization" 
@@ -31,8 +37,12 @@
 							</header>
  							<fieldset>
 									<t:text_input 			path="name"  labelName="${labelOrganizationName}" />
+									<div class="row">
+										<t:text_input		path="lat"	 labelName="${labelOrganizationName}" sectionCss="col col-6"/>
+										<t:text_input		path="lng"	 labelName="${labelOrganizationName}" sectionCss="col col-6"/>
+									</div>
 									<t:textarea_input		path="desc"	 labelName="${labelOrganizationDesc}" />
-							</fieldset>
+																</fieldset>
 							<footer>
 								<button type="submit" class="btn btn-primary">
 													${labelButtonSave}
@@ -43,8 +53,42 @@
 								</footer>
 						</form:form>
 					</div>
+					<!-- end widget content -->
+				</div>
+			</div>
+		</article>	
+				<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-1">
+				<header>
+					<h2><strong>Default</strong> <i>Widget</i></h2>				
+				</header>
+				<!-- widget div-->
+				<div>
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+						<input class="form-control" type="text">
+						<span class="note"><i class="fa fa-check text-success"></i> Change title to update and save instantly!</span>
+					</div>
+					<!-- end widget edit box -->
+									
+					<!-- widget content -->
+					<div class="widget-body no-padding">
+						<div id="mapContainer" style="height:365px">
+						</div>
+						<script type="text/javascript"> 
+								var map = new BMap.Map("mapContainer");           
+								var point = new BMap.Point(116.404, 39.915);    
+								map.centerAndZoom(point, 15); 
+						</script>
+					</div>
+					<!-- end widget content -->
 				</div>
 			</div>
 		</article>
+		
 	</div>
+	
 </section>

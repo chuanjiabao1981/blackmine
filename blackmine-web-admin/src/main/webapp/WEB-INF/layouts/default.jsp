@@ -44,6 +44,7 @@
 
 		<!-- GOOGLE FONT -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=HcB2PNxU37GlG1jVQeosqND2"></script>
 
 	</head>
 	<body class="">
@@ -183,8 +184,6 @@
 		<script src="${pageContext.request.contextPath}/js/plugin/datatables/ZeroClipboard.js"></script>
 		<script src="${pageContext.request.contextPath}/js/plugin/datatables/media/js/TableTools.min.js"></script>
 		<script src="${pageContext.request.contextPath}/js/plugin/datatables/DT_bootstrap.js"></script>
-		
-
 		<script type="text/javascript">
 		// DO NOT REMOVE : GLOBAL FUNCTIONS!
 		$(document).ready(function() {
